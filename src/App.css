@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box;
+}
+.App {
+  text-align: center;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+.half-screen:nth-child(2){
+  padding: 16px 8px 16px 16px;
+}
+.half-screen:last-child {
+  padding: 16px 16px 16px 8px;
+}
+@media screen and (min-width: 1640px) {
+  .App {
+    display: table;
+  }
+  .half-screen {
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+.tables {
+  margin: 0 auto;
+  border: 1px solid black;
+  border-collapse: collapse;
+  max-width: 830px;
+}
+.tables th {
+  padding: 5px 15px;
+  border: 1px solid black;
+}
+.tables td {
+  padding: 0 10px;
+  border: 1px solid black;
+}
+.table-levels {
+  width: 110px;
+}
+.table-levels-h {
+  /*width: 400px;*/
+}
+.table-name {
+  width: 160px;
+}
+.table-spent {
+  width: 130px;
+}
+.level-input {
+  border: none;
+  text-align: center;
+  outline: 0;
+  padding: 5px;
+  font-size: 24px;
+  transition: all 200ms linear;
+  width: 100%;
+  background: lightgrey;
+  color: transparent;
+  text-shadow: 0 0 0 black;
+}
+.tables > tbody > tr > td:nth-child(2) {
+  padding: 0;
+}
+.level-column {
+  /*width: 90px;*/
+}
+.title {
+  font-size: 32px;
+}
+.btn {
+  display: block;
+  padding: 5px 12px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+  transition: all 200ms linear;
+  cursor: pointer;
+  outline: 0;
+}
+.btn:hover {
+  box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3);
+}
+.wrapper {
+  display: table;
+  margin: 0 auto;
+}
+.wrapper-cell {
+  display: table-cell;
+  padding-left: 5px;
+  font-size: 32px;
+  vertical-align: middle;
+}
+.version {
+  position: fixed;
+  font-weight: bold;
+}
