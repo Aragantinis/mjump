@@ -1,6 +1,6 @@
 # MJump
 MJump is a simple calculator app for the [Pokemon Magikarp Jump game](https://play.google.com/store/apps/details?id=jp.pokemon.koiking).
-You can access it in this [link](https://allangalera/mjump).
+You can access it in this [link](https://allangalera.com/mjump).
 The data used was mined from [serebii website](https://www.serebii.net/magikarpjump). Thank you serebii for keeping the data updated.
 
 ## Tech
