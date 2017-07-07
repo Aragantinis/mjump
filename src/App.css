@@ -1,48 +1,129 @@
 * {
   box-sizing: border-box;
 }
+body {
+  margin: 0;
+  padding: 0;
+}
+#root {
+  margin: 0;
+  padding: 0;
+}
 .App {
   text-align: center;
-  min-width: 100vw;
+  width: 99vw;
   min-height: 100vh;
+  padding-top: 50px;
 }
-.half-screen:nth-child(2){
-  padding: 16px 8px 16px 16px;
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 50px;
+  background: #000000;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
 }
-.half-screen:last-child {
-  padding: 16px 16px 16px 8px;
+.navbar > h1 {
+  margin: 0;
+  line-height: 50px;
+  color: #ffffff;
 }
-@media screen and (min-width: 1640px) {
-  .App {
-    display: table;
-  }
-  .half-screen {
-    display: table-cell;
-    vertical-align: middle;
-  }
+.navbar > h1 > span {
+  font-size: 12px;
+}
+.version {
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-weight: bold;
+  z-index: 999;
+}
+.controls {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  z-index: 999;
+  padding: 12px;
 }
 .tables {
   margin: 0 auto;
-  border: 1px solid black;
   border-collapse: collapse;
-  max-width: 830px;
+  width: 1535px;
+  font-size: 12px;
 }
-.tables th {
+.headerrow {
+  background: #333333;
+  border: 1px solid #ffffff;
+  color: #ffffff;
   padding: 5px 15px;
-  border: 1px solid black;
 }
-.tables td {
+.datarow {
   padding: 0 10px;
-  border: 1px solid black;
 }
-.table-levels {
+.datarow:nth-child(odd) {
+  background: #e5e5e5;
+}
+.datarow:nth-child(odd) > td:nth-child(2) > table > tbody > tr > td,
+.datarow:nth-child(odd) > td:nth-child(2) > table > tbody > tr > td > input {
+  background: #e5e5e5;
+}
+.datarow:nth-child(even) {
+  background: #cccccc;
+}
+.datarow:nth-child(even) > td:nth-child(2) > table > tbody > tr > td,
+.datarow:nth-child(even) > td:nth-child(2) > table > tbody > tr > td > input {
+  background: #cccccc;
+}
+.totalrow {
+  color: #ffffff;
+  background: #333333 !important;
+  font-weight: bold;
+}
+.totalrow > td {
+  padding: 5px 0px;
+}
+.title-column {
+  width: 50px;
+}
+.title-column > div {
+  font-size: 30px;
+  width: 50px;
+}
+.food-column {
+  background: #fbc02d;
+}
+.food-column > div {
+  transform: translate(0px, 21px) rotate(-90deg);
+  background: #fbc02d;
+}
+.training-column {
+  background: #303f9f;
+}
+.training-column > div {
+  transform: translate(0px, 44px) rotate(-90deg);
+  background: #303f9f;
+}
+.separete-row {
+  height: 5px;
+}
+.column-info {
+  width: 95px;
+  border: 1px solid #ffffff;
+}
+.column-info:first-child {
+    border-left: none;
+}
+.level-column {
   width: 110px;
-}
-.table-levels-h {
-  /*width: 400px;*/
+  border-right: 1px solid #ffffff;
 }
 .table-name {
-  width: 160px;
+  width: 125px;
+  border-right: 1px solid #ffffff;
+}
+.lvl-header {
+  border-left: 1px solid #ffffff;
 }
 .table-spent {
   width: 130px;
@@ -51,35 +132,49 @@
   border: none;
   text-align: center;
   outline: 0;
-  padding: 5px;
-  font-size: 24px;
+  padding: 0px;
+  font-size: 20px;
   transition: all 200ms linear;
   width: 100%;
-  background: lightgrey;
+  background: transparent;
   color: transparent;
-  text-shadow: 0 0 0 black;
+  text-shadow: 0 0 0 #000000;
+}
+.aritimetic-input {
+  background: #000000;
+  border: none;
+  border-radius: 10px;
+  height: 20px;
+  width: 20px;
+  color: white;
+  outline: 0;
+  cursor: pointer;
+}
+.aritimetic-input:hover {
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
 }
 .tables > tbody > tr > td:nth-child(2) {
   padding: 0;
-}
-.level-column {
-  /*width: 90px;*/
 }
 .title {
   font-size: 32px;
 }
 .btn {
-  display: block;
+  display: inline-block;
   padding: 5px 12px;
-  border: none;
+  border: 1px solid #e5e5e5;
   border-radius: 5px;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
   transition: all 200ms linear;
   cursor: pointer;
+  width: 115px;
   outline: 0;
+  background: #cccccc;
+  margin-right: 15px;
 }
 .btn:hover {
   box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3);
+  background: #e5e5e5;
 }
 .wrapper {
   display: table;
@@ -90,8 +185,4 @@
   padding-left: 5px;
   font-size: 32px;
   vertical-align: middle;
-}
-.version {
-  position: fixed;
-  font-weight: bold;
 }

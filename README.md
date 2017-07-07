@@ -10,6 +10,10 @@ The data used was mined from [serebii website](https://www.serebii.net/magikarpj
 * [Express](http://expressjs.com)
 
 ## Changelog
+### 07/07/2017 - v0.0.3
+* Added Jump Power columns
+* Added Custom columns
+* Layout revised
 ### 06/07/2017 - v0.0.2
 * Added "Coins spent" column
 ### 06/07/2017 - v0.0.1
